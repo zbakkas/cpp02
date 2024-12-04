@@ -8,14 +8,21 @@ Fixed::Fixed()
     std::cout <<"Default constructor called\n";
 
 }
-Fixed::Fixed(const int converts):value(converts << fractional)
+
+
+Fixed::Fixed(const int intvalue)
 {
+    value = intvalue *pow(2,fractional);
+    // this->value = intValue << fractional;
     std::cout <<"Int constructor called\n";
 }
-Fixed::Fixed(const float converts):value(roundf(converts * (1 << fractional)))
+Fixed::Fixed(const float floatvalue)
 {
+    value =roundf(floatvalue* pow(2,fractional));
+    // this->value = roundf(floatvalue * (1 << fractional));
     std::cout <<"Float constructor called\n";
 }
+
 Fixed::Fixed(const Fixed& fixed)
 {
     this->value = fixed.value;
@@ -48,12 +55,14 @@ void Fixed::setRawBits(int const raw)
 
 int Fixed::toInt(void) const
 {
-	return this->value >> fractional;
+    return value /pow(2,fractional);
+	// return this->value >> fractional;
 }
 
 float Fixed::toFloat(void) const
 {
-	return (float)this->value / (float)(1 << fractional);
+	// return (float)this->value / (float)(1 << fractional);
+    return (float)value /pow(2,fractional);
 }
 
 
