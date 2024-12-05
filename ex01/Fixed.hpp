@@ -21,6 +21,8 @@ class Fixed
         int toInt( void ) const;
 
 };
+
+//  overloaded insertion operator (<<)
 std::ostream& operator<<(std::ostream &os, Fixed const &object);
 
 #endif
