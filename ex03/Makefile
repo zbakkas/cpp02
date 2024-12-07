@@ -1,6 +1,6 @@
 CPP =c++
 CFLAGS =  -Wall -Wextra -Werror -std=c++98
-FILES = main.cpp Fixed.cpp
+FILES = main.cpp Fixed.cpp bsp.cpp Point.cpp
 OBJ= $(FILES:.cpp=.o)
 NAME= fixed
 
@@ -9,7 +9,7 @@ all :$(NAME)
 $(NAME):$(OBJ)
 	$(CPP) $(CFLAGS) $(OBJ) -o $(NAME)
 
-%.o:%.cpp Fixed.hpp
+%.o:%.cpp Fixed.hpp Point.hpp
 	$(CPP) $(CFLAGS) -c $< -o $@
 
 clean:

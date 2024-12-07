@@ -10,16 +10,15 @@ Fixed::Fixed()
 }
 
 
-Fixed::Fixed(const int intvalue)
+Fixed::Fixed(const int intvalue):value(intvalue << fractional)
 {
-    value = intvalue *pow(2,fractional);
-    // this->value = intValue << fractional;
+    // value = intvalue *pow(2,fractional);
     std::cout <<"Int constructor called\n";
 }
 Fixed::Fixed(const float floatvalue)
 {
-    value =roundf(floatvalue* pow(2,fractional));
-    // this->value = roundf(floatvalue * (1 << fractional));
+    // value =roundf(floatvalue* pow(2,fractional));
+    this->value = roundf(floatvalue * (1 << fractional));
     std::cout <<"Float constructor called\n";
 }
 
