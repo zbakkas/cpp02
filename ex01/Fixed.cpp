@@ -54,14 +54,14 @@ void Fixed::setRawBits(int const raw)
 
 int Fixed::toInt(void) const
 {
-    return value /pow(2,fractional);
-	// return this->value >> fractional;
+    // return value /pow(2,fractional);
+	return this->value >> fractional;
 }
 
 float Fixed::toFloat(void) const
 {
-	// return (float)this->value / (float)(1 << fractional);
-    return (float)value /pow(2,fractional);
+	return (float)(this->value / (float)(1 << fractional));
+    // return (float)value /pow(2,fractional);
 }
 
 

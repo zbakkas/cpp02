@@ -65,17 +65,29 @@ std::ostream    &operator<<(std::ostream &os, Fixed const &object)
 
 // Comparison operators
 bool Fixed::operator>(const Fixed& other) const
-{ return value > other.value; }
+{ 
+    return value > other.value;
+}
 bool Fixed::operator<(const Fixed& other) const
-{ return value < other.value; }
+{
+    return value < other.value;
+}
 bool Fixed::operator>=(const Fixed& other) const
-{ return value >= other.value; }
+{ 
+    return value >= other.value;
+}
 bool Fixed::operator<=(const Fixed& other) const
-{ return value <= other.value; }
+{ 
+    return value <= other.value;
+}
 bool Fixed::operator==(const Fixed& other) const
-{ return value == other.value; }
+{ 
+    return value == other.value;
+}
 bool Fixed::operator!=(const Fixed& other) const
-{ return value != other.value; }
+{ 
+    return value != other.value;
+}
 
 // Arithmetic operators
 Fixed Fixed::operator+(const Fixed& other) const

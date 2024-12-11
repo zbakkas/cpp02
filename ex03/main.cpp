@@ -2,10 +2,10 @@
 
 int main( void ) 
 {
-    Point a(1.6, 2);
-    Point b(1.6f, 0.5f);
-    Point c(0, 0);
-    Point point(0.64f, 0.8f);
+    Point c(1.6, 2);
+    Point b(3, 1.5f);
+    Point a(0, 0);
+    Point point(2.7f, 1.4f);
 
     if (bsp(a,b,c,point))
         std::cout << "----------> inside the Triangle" << std::endl;
